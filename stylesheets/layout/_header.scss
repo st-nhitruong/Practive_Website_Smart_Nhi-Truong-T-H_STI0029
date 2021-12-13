@@ -1,0 +1,35 @@
+@import url("../base/_variables.scss");
+.navbar {
+  @include pxRem(padding, 20 0);
+  background: map-get($map: $color, $key: white);
+  .navbar-brand {
+    @include pxRem(margin-right, 16);
+    i {
+      color: map-get($map: $color, $key: primary);
+    }
+    a {
+      &:active,
+      &:visited {
+        color: map-get($map: $color, $key: black);
+      }
+    }
+  }
+  .navbar-collapse {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    .navbar-list {
+      display: flex;
+      margin-right: auto;
+      .navbar-item {
+        @include pxRem(padding, 10 15);
+        a {
+          color: map-get($map: $color, $key: gray);
+          &:hover {
+            color: map-get($map: $color, $key: primary);
+          }
+        }
+      }
+    }
+  }
+}

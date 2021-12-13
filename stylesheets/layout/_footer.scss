@@ -1,0 +1,38 @@
+@import url("../base/_variables.scss");
+.footer {
+  @include pxRem(padding, 40 0 20 0);
+  background: map-get($map: $color, $key: grey-bg);
+  .copyright {
+    .template-name {
+      font-weight: bold;
+    }
+    a {
+      color: map-get($map: $color, $key: primary);
+      text-decoration: underline;
+    }
+  }
+  .footer-social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .footer-social-item {
+      margin: 0 8px;
+      font-size: map-get($map: $font-size, $key: xxxl);
+      &.twitter {
+        color: map-get($map: $color, $key: primary);
+      }
+      &.instagram {
+        color: map-get($map: $color, $key: instagram);
+      }
+      &.whatsapp {
+        color: map-get($map: $color, $key: whatsapp);
+      }
+      &.google {
+        color: map-get($map: $color, $key: google);
+      }
+      &.pink {
+        color: map-get($map: $color, $key: pink);
+      }
+    }
+  }
+}

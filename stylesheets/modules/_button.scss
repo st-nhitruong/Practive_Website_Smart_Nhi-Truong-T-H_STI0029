@@ -1,0 +1,41 @@
+.btn {
+  @include pxRem(padding, 6 10);
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  text-align: center;
+  font-size: map-get($map: $font-size, $key: normal-lg);
+  cursor: pointer;
+  &.btn-primary {
+    color: map-get($map: $color, $key: white);
+    background-color: map-get($map: $color, $key: primary);
+  }
+  &.btn-outline-primary {
+    color: map-get($map: $color, $key: primary);
+    background-color: map-get($map: $color, $key: white);
+    border: 1px solid map-get($map: $color, $key: primary);
+    &:hover {
+      color: map-get($map: $color, $key: white);
+      background-color: map-get($map: $color, $key: primary);
+    }
+  }
+  &.btn-link {
+    color: map-get($map: $color, $key: gray);
+  }
+  &.btn-lg {
+    @include pxRem(padding, 10 15);
+  }
+  &.btn-send-mess {
+    @include pxRem(padding, 17 29);
+    font-size: map-get($map: $font-size, $key: sm);
+    font-weight: 600;
+  }
+  &.price-tag {
+    @include pxRem(margin, 30 0 5 0);
+    @include pxRem(padding, 15 30);
+    border-radius: 5px;
+    font-size: map-get($map: $font-size, $key: normal);
+    line-height: 24px;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,655 @@
+@import url("../base/_variables.scss");
+.bg-grey {
+  @include pxRem(padding, 90 0);
+  background: map-get($map: $color, $key: grey-bg);
+}
+.title-center {
+  @include pxRem(margin-bottom, 20);
+  width: 100%;
+  color: map-get($map: $color, $key: black);
+  font-size: map-get($map: $font-size, $key: xxxxl);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.2;
+}
+.title-left {
+  @include pxRem(margin-bottom, 20);
+  width: 100%;
+  color: map-get($map: $color, $key: black);
+  font-size: map-get($map: $font-size, $key: xxxxl);
+  font-weight: 700;
+  text-align: left;
+  line-height: 1.2;
+}
+.title-lg {
+  font-size: map-get($map: $font-size, $key: large);
+}
+.section-newsletter {
+  h2 {
+    @include pxRem(margin-bottom, 20);
+    font-size: map-get($map: $font-size, $key: large-xl);
+    i {
+      color: map-get($map: $color, $key: green);
+    }
+  }
+  p {
+    @include pxRem(margin-bottom, 35);
+    font-size: map-get($map: $font-size, $key: xl);
+    color: map-get($map: $color, $key: gray-a);
+  }
+  .newsletter-form {
+    @include pxRem(max-width, 494);
+    width: 100%;
+    background: map-get($map: $color, $key: white);
+    border-radius: 5px;
+    box-shadow: 3px 4px 12px rgb(0 0 0 / 10%);
+    input {
+      @include pxRem(max-width, 349);
+      @include pxRem(height, 59);
+      @include pxRem(padding, 0 20 0 45);
+      width: 100%;
+      background: url("../../assets/images/input-envelope.png") no-repeat 15px 20px;
+      background-color: map-get($map: $color, $key: white);
+      border: 1px solid transparent;
+      border-radius: 5px 0 0 5px;
+    }
+    button {
+      @include pxRem(max-width, 145);
+      @include pxRem(height, 59);
+      background-color: map-get($map: $color, $key: red);
+      border-radius: 0 5px 5px 0;
+      color: map-get($map: $color, $key: white);
+    }
+  }
+  .newsletter-term {
+    @include pxRem(margin-top, 15);
+    font-size: map-get($map: $font-size, $key: sm);
+    span {
+      @include pxRem(margin-right, 15);
+      color: map-get($map: $color, $key: gray-b);
+      i {
+        color: map-get($map: $color, $key: green);
+      }
+    }
+  }
+}
+.section-white {
+  @include pxRem(padding, 90 0);
+  background: map-get($map: $color, $key: white);
+  h3 {
+    font-size: map-get($map: $font-size, $key: large);
+  }
+  .list-services {
+    @include pxRem(margin-top, 60);
+    display: flex;
+    text-align: center;
+    .item-service {
+      @include pxRem(margin, 0 10);
+      .main-services {
+        transition: transform 1s;
+        &:hover {
+          transform: translateY(-15px);
+        }
+        @include pxRem(padding, 25 30);
+        background: map-get($map: $color, $key: white);
+        box-shadow: rgb(33 33 33 / 6%) 0 4px 24px 5px;
+        border-radius: 8px;
+        i {
+          @include pxRem(margin-bottom, 5);
+          font-size: map-get($map: $font-size, $key: large-xxl);
+          &.green {
+            color: map-get($map: $color, $key: green);
+          }
+          &.red {
+            color: map-get($map: $color, $key: red);
+          }
+          &.blue {
+            color: map-get($map: $color, $key: primary);
+          }
+        }
+        .title-service {
+          @include pxRem(margin-bottom, 20);
+          font-size: map-get($map: $font-size, $key: xl);
+        }
+        .content-service {
+          @include pxRem(margin-bottom, 20);
+          @include pxRem(padding, 0 10);
+          color: map-get($map: $color, $key: secondary);
+        }
+      }
+    }
+  }
+}
+.section-testimonials {
+  @include pxRem(padding, 90 0 30 0);
+  .popup-gallery {
+    position: relative;
+    .img-video {
+      width: 100%;
+      z-index: 100;
+      border-radius: 8px;
+      box-shadow: 15px 10px 20px rgb(0 0 0 / 15%);
+    }
+    .video-play-icon {
+      @include pxRem(width, 90);
+      @include pxRem(height, 90);
+      @include pxRem(margin-top, -45);
+      @include pxRem(margin-left, -45);
+      position: absolute;
+      z-index: 100;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      font-size: 40px;
+      background-color: rgba(255, 255, 255, 0.78);
+      border-radius: 50%;
+      line-height: 90px;
+      i {
+        color: map-get($map: $color, $key: dark-green-a);
+      }
+    }
+  }
+  .testim-info {
+    @include pxRem(padding-left, 40);
+    i {
+      @include pxRem(margin-bottom, 20);
+      font-size: 40px;
+      color: map-get($map: $color, $key: green);
+    }
+    p {
+      @include pxRem(margin-bottom, 20);
+      font-size: map-get($map: $font-size, $key: normal-lg);
+      line-height: 26px;
+      font-weight: 400;
+      color: map-get($map: $color, $key: secondary);
+    }
+    h6 {
+      @include pxRem(margin-bottom, 5);
+      font-size: map-get($map: $font-size, $key: normal);
+      line-height: 28px;
+      font-weight: 800;
+      span {
+        &.red {
+          color: map-get($map: $color, $key: red);
+        }
+      }
+    }
+  }
+}
+.section-partners {
+  @include pxRem(padding, 30 0 90 0);
+  .list-partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .item-partner {
+      @include pxRem(margin, 20 30 10 0);
+      @include pxRem(padding, 29 10);
+      background-color: map-get($map: $color, $key: white);
+      box-shadow: rgb(33 33 33 / 6%) 0 4px 24px 5px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 1s;
+      &:hover {
+        transform: translateY(-10px);
+      }
+      &.d-none {
+        display: none;
+      }
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.section-grow-business {
+  .title-grow {
+    @include pxRem(margin-bottom, 20);
+    font-size: map-get($map: $font-size, $key: large);
+  }
+  .content-grow {
+    @include pxRem(margin-bottom, 20);
+    font-size: map-get($map: $font-size, $key: normal-lg);
+    color: map-get($map: $color, $key: secondary);
+  }
+  .list-grows {
+    @include pxRem(margin-bottom, 25);
+    font-size: map-get($map: $font-size, $key: normal-lg);
+    color: map-get($map: $color, $key: secondary);
+    .item-grow {
+      @include pxRem(margin-bottom, 4);
+      font-size: map-get($map: $font-size, $key: normal);
+      line-height: 26px;
+      i {
+        @include pxRem(margin-right, 1);
+        @include pxRem(padding-right, 5);
+        font-size: map-get($map: $font-size, $key: xxxl);
+        color: map-get($map: $color, $key: primary);
+        line-height: 26px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.section-agency {
+  .title-agency {
+    @include pxRem(margin-bottom, 30);
+  }
+  .list-agency {
+    @include pxRem(margin, 0 95);
+    width: 100%;
+    display: flex;
+    text-align: center;
+    .item-agency {
+      i {
+        font-size: 40px;
+        line-height: 60px;
+        &.primary {
+          color: map-get($map: $color, $key: primary);
+        }
+        &.orange {
+          color: map-get($map: $color, $key: orange);
+        }
+        &.green {
+          color: map-get($map: $color, $key: green);
+        }
+        &.yellow {
+          color: map-get($map: $color, $key: yellow);
+        }
+      }
+      .agency-numbers {
+        font-size: map-get($map: $font-size, $key: xxxl);
+        line-height: 40px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+.section-team {
+  @include pxRem(padding, 90 0 70 0);
+  .title-team {
+    width: 100%;
+    font-size: map-get($map: $font-size, $key: large);
+    font-weight: 700;
+    text-align: center;
+    color: map-get($map: $color, $key: black);
+  }
+  .list-teams {
+    @include pxRem(margin-top, 30);
+    width: 100%;
+    display: flex;
+    .item-team {
+      @include pxRem(padding, 0 10);
+      .img-team {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .info-team {
+        @include pxRem(padding, 10 25 40 25);
+        text-align: center;
+        .name {
+          @include pxRem(margin, 20 0 1);
+        }
+        .position {
+          color: #acacac;
+          font-style: italic;
+        }
+        .list-social-icons {
+          @include pxRem(margin-top, 25);
+          display: flex;
+          justify-content: center;
+          .item-social-icon {
+            @include pxRem(margin, 0 5);
+            a {
+              @include pxRem(width, 36);
+              @include pxRem(height, 36);
+              @include pxRem(padding, 8);
+              display: inline-block;
+              border-radius: 50%;
+              font-size: 18px;
+              line-height: 0;
+              color: #fff;
+              &.twitter {
+                background-color: map-get($map: $color, $key: twitter);
+              }
+              &.pinterest {
+                background-color: map-get($map: $color, $key: pinterest);
+              }
+              &.facebook {
+                background-color: map-get($map: $color, $key: facebook);
+              }
+              &.pink {
+                background-color: map-get($map: $color, $key: pink);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.section-works {
+  p {
+    @include pxRem(margin-bottom, 20);
+    font-size: map-get($map: $font-size, $key: normal-lg);
+    line-height: 26px;
+    font-weight: 400;
+    color: map-get($map: $color, $key: secondary);
+  }
+  .linkedIn,
+  .upwork {
+    display: block;
+    &.first {
+      border-right: 1px solid #cecece;
+    }
+    p {
+      @include pxRem(margin-bottom, 5);
+      font-weight: bold;
+      color: #071e55;
+    }
+    .rating {
+      @include pxRem(margin, 0 20 30 0);
+      i {
+        color: #fdcc28;
+      }
+    }
+  }
+  .accordion-item {
+    @include pxRem(margin-bottom, 20);
+    border: none;
+    background-color: map-get($map: $color, $key: white);
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 10%);
+    .accordion-header {
+      @include pxRem(padding, 20 25);
+      max-width: 100%;
+      position: relative;
+      margin-bottom: 0;
+      background-color: transparent;
+      border-bottom: none;
+    }
+    .accordion-button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border: 0;
+      text-align: left;
+      background-color: map-get($map: $color, $key: white);
+      font-weight: 700;
+      font-size: map-get($map: $font-size, $key: xl);
+      color: map-get($map: $color, $key: black);
+      &::after {
+        @include pxRem(width, 20);
+        @include pxRem(height, 20);
+        margin-left: auto;
+        content: "";
+        background: url("/assets/icons/arrow.svg") no-repeat;
+      }
+      i {
+        @include pxRem(width, 46);
+        @include pxRem(height, 46);
+        @include pxRem(margin-right, 10);
+        @include pxRem(padding, 10 10);
+        color: map-get($map: $color, $key: green);
+        font-size: map-get($map: $font-size, $key: xl);
+        line-height: 20px;
+        border: 2px solid map-get($map: $color, $key: green);
+        border-radius: 50%;
+      }
+    }
+    .accordion-body {
+      @include pxRem(padding, 1 25 25);
+      border-top: none;
+      color: map-get($map: $color, $key: secondary);
+    }
+  }
+}
+.section-price {
+  @include pxRem(padding, 90 0);
+  .list-price-box {
+    width: 100%;
+    display: flex;
+    .price-box {
+      @include pxRem(margin-bottom, 20);
+      @include pxRem(padding, 40 45 30 45);
+      border-radius: 8px;
+      border-bottom: 3px solid #e0e0e0;
+      background-color: map-get($map: $color, $key: white);
+      box-shadow: rgb(33 33 33 / 6%) 0 4px 24px 5px;
+      text-align: center;
+      .price-title {
+        font-size: map-get($map: $font-size, $key: xl);
+        line-height: 24px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: map-get($map: $color, $key: black);
+      }
+      .price-value {
+        @include pxRem(margin-top, 20);
+        @include pxRem(margin-bottom, 10);
+        font-size: 65px;
+        line-height: 70px;
+        font-weight: 600;
+        color: map-get($map: $color, $key: black);
+      }
+      .price-subtitle {
+        @include pxRem(margin-bottom, 30);
+        font-size: map-get($map: $font-size, $key: normal);
+        line-height: 24px;
+        font-weight: 600;
+        color: map-get($map: $color, $key: gray-c);
+      }
+      .price-text {
+        @include pxRem(margin-bottom, 5);
+        font-size: map-get($map: $font-size, $key: normal);
+        line-height: 28px;
+        font-weight: 400;
+        text-align: left;
+        color: map-get($map: $color, $key: gray-c);
+        i {
+          @include pxRem(padding-right, 5);
+          color: map-get($map: $color, $key: primary);
+        }
+      }
+      &:hover {
+        border-bottom: 3px solid map-get($map: $color, $key: primary);
+      }
+    }
+  }
+}
+.section-features {
+  .list-features {
+    display: flex;
+    flex-wrap: wrap;
+    .item-feature {
+      @include pxRem(margin-top, 30);
+      display: flex;
+      i {
+        font-size: 40px;
+        line-height: 50px;
+        &.light-green {
+          color: map-get($map: $color, $key: light-green);
+        }
+        &.light-blue {
+          color: map-get($map: $color, $key: light-blue);
+        }
+        &.orange {
+          color: map-get($map: $color, $key: orange);
+        }
+        &.dark-blue {
+          color: map-get($map: $color, $key: dark-blue);
+        }
+        &.light-red {
+          color: map-get($map: $color, $key: light-red);
+        }
+        &.dark-green {
+          color: map-get($map: $color, $key: dark-green);
+        }
+      }
+      .feature-box {
+        @include pxRem(margin-left, 20);
+        width: 75%;
+        .feature-name {
+          @include pxRem(margin-bottom, 10);
+          font-size: map-get($map: $font-size, $key: xl);
+        }
+      }
+    }
+  }
+}
+.section-quote {
+  @include pxRem(padding-top, 90);
+  text-align: center;
+  .content-quote {
+    @include pxRem(margin-bottom, 25);
+    color: map-get($map: $color, $key: secondary);
+    font-size: map-get($map: $font-size, $key: xxxl);
+    line-height: 38px;
+    font-weight: 300;
+    font-style: italic;
+  }
+  .name-ceo {
+    @include pxRem(margin-bottom, 5);
+    font-size: map-get($map: $font-size, $key: lg);
+  }
+  .position {
+    color: map-get($map: $color, $key: primary);
+    font-size: map-get($map: $font-size, $key: normal-lg);
+  }
+}
+.section-blog {
+  .list-blogs {
+    width: 100%;
+    display: flex;
+    .blog-item {
+      @include pxRem(margin, 40 15 1 15);
+      background-color: map-get($map: $color, $key: white);
+      box-shadow: rgb(33 33 33 / 6%) 0 4px 24px 5px;
+      border-radius: 8px;
+      transition: transform 1s;
+      &:hover {
+        transform: translateY(-15px);
+      }
+      .image-wrapper {
+        position: relative;
+        .img-blog {
+          width: 100%;
+          border-radius: 8px 8px 0 0;
+        }
+      }
+      .icon-wrapper {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        height: 97%;
+        border-radius: 8px 8px 0 0;
+        background-color: map-get($map: $color, $key: dark-green-a);
+        text-align: center;
+        opacity: 0;
+        i {
+          @include pxRem(margin-top, -18);
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          right: 0%;
+          font-size: map-get($map: $font-size, $key: large);
+          z-index: 9999;
+          color: map-get($map: $color, $key: white);
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+      .blog-item-inner {
+        @include pxRem(padding, 25);
+        .blog-title {
+          @include pxRem(margin-bottom, 10);
+          a {
+            font-size: map-get($map: $font-size, $key: xl);
+            color: map-get($map: $color, $key: black);
+          }
+        }
+        .blog-icons {
+          color: map-get($map: $color, $key: gray-d);
+          font-size: map-get($map: $font-size, $key: sm);
+          font-style: italic;
+        }
+        p {
+          @include pxRem(margin, 12 0 2 0);
+          font-size: map-get($map: $font-size, $key: normal-lg);
+          line-height: 26px;
+          font-weight: 400;
+          color: map-get($map: $color, $key: secondary);
+        }
+      }
+    }
+  }
+}
+.section-contact {
+  @include pxRem(padding, 90 0);
+  .contact-input {
+    @include pxRem(height, 55);
+    @include pxRem(margin-bottom, 23);
+    @include pxRem(padding, 0 10);
+    width: 100%;
+    color: map-get($map: $color, $key: gray-e);
+    background-color: #f6f7f8;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    font-size: map-get($map: $font-size, $key: sm);
+    &:focus {
+      outline: none;
+    }
+  }
+  .contact-message {
+    @include pxRem(height, 205);
+    @include pxRem(margin-bottom, 20);
+    @include pxRem(padding, 10);
+    width: 100%;
+    color: map-get($map: $color, $key: gray-e);
+    background-color: map-get($map: $color, $key: gray-g);
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    font-size: map-get($map: $font-size, $key: sm);
+    &:focus {
+      outline: none;
+    }
+  }
+  .contact-maps {
+    @include pxRem(margin-bottom, 20);
+    @include pxRem(padding, 10);
+    border-radius: 8px;
+    background-color: map-get($map: $color, $key: gray-g);
+    border: 1px solid #eaeaea;
+  }
+  h5 {
+    @include pxRem(margin-bottom, 20);
+    color: map-get($map: $color, $key: black);
+    font-weight: 700;
+    font-size: map-get($map: $font-size, $key: lg);
+  }
+  .item-contact-info {
+    @include pxRem(margin-bottom, 8);
+    font-weight: 400;
+    color: map-get($map: $color, $key: secondary);
+    font-size: map-get($map: $font-size, $key: normal-lg);
+    i {
+      @include pxRem(padding-right, 5);
+      font-size: map-get($map: $font-size, $key: lg);
+      color: map-get($map: $color, $key: blue);
+    }
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+      &:active,
+      &:visited {
+        color: map-get($map: $color, $key: secondary);
+      }
+    }
+  }
+}
