@@ -17,6 +17,7 @@ body {
   line-height: 1.7;
   letter-spacing: 0.8px;
   background-color: #fff;
+  font-size: 16px;
   overscroll-behavior: contain;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -1209,9 +1210,9 @@ textarea {
 .section-white .list-services .item-service {
   margin: 0px 10px;
   margin: convertPxToRem(0) convertPxToRem(10);
-  position: relative;
 }
 .section-white .list-services .item-service .main-services {
+  transition: transform 1s;
   padding: 25px 30px;
   padding: convertPxToRem(25) convertPxToRem(30);
   background: #fff;
@@ -1219,8 +1220,7 @@ textarea {
   border-radius: 8px;
 }
 .section-white .list-services .item-service .main-services:hover {
-  position: absolute;
-  top: -15px;
+  transform: translateY(-15px);
 }
 .section-white .list-services .item-service .main-services i {
   margin-bottom: 5px;
@@ -1279,6 +1279,7 @@ textarea {
   font-size: 40px;
   background-color: rgba(255, 255, 255, 0.78);
   border-radius: 50%;
+  line-height: 90px;
 }
 .section-testimonials .popup-gallery .video-play-icon i {
   color: #164145;
@@ -1330,6 +1331,10 @@ textarea {
   box-shadow: rgba(33, 33, 33, 0.06) 0 4px 24px 5px;
   border-radius: 8px;
   text-align: center;
+  transition: transform 1s;
+}
+.section-partners .list-partners .item-partner:hover {
+  transform: translateY(-10px);
 }
 .section-partners .list-partners .item-partner.d-none {
   display: none;
@@ -1547,10 +1552,7 @@ textarea {
   height: convertPxToRem(20);
   margin-left: auto;
   content: "";
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-size: 20px;
-  transition: transform 0.2s ease-in-out;
+  background: url("/assets/icons/arrow.svg") no-repeat;
 }
 .section-works .accordion-item .accordion-button i {
   width: 46px;
@@ -1709,10 +1711,13 @@ textarea {
 .section-blog .list-blogs .blog-item {
   margin: 40px 15px 1px 15px;
   margin: convertPxToRem(40) convertPxToRem(15) convertPxToRem(1) convertPxToRem(15);
-  position: relative;
   background-color: #fff;
   box-shadow: rgba(33, 33, 33, 0.06) 0 4px 24px 5px;
   border-radius: 8px;
+  transition: transform 1s;
+}
+.section-blog .list-blogs .blog-item:hover {
+  transform: translateY(-15px);
 }
 .section-blog .list-blogs .blog-item .image-wrapper {
   position: relative;
@@ -1746,7 +1751,7 @@ textarea {
   color: #fff;
 }
 .section-blog .list-blogs .blog-item .icon-wrapper:hover {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 .section-blog .list-blogs .blog-item .blog-item-inner {
   padding: 25px;
