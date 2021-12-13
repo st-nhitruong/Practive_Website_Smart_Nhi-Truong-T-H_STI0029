@@ -1,6 +1,6 @@
 @import url("../base/_variables.scss");
 .footer {
-  padding: 40px 0 20px 0;
+  @include pxRem(padding, 40 0 20 0);
   background: map-get($map: $color, $key: grey-bg);
   .copyright {
     .template-name {

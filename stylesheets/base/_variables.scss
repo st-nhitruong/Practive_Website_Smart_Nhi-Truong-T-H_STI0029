@@ -6,9 +6,12 @@ $color: (
   gray-b: #878787,
   gray-c: #6a6a6a,
   gray-d: #858585,
+  gray-e: #727272,
+  gray-g: #f6f7f8,
   grey-bg: #f5f7fc,
   black: #071e55,
   white: #fff,
+  white-a: #e0e0e0,
   red: #e52f37,
   orange: #fc6a3f,
   yellow: #fe9c24,
@@ -26,6 +29,7 @@ $color: (
   light-red: #fc6a3f,
   dark-green: #87ac34,
   blue: #1e90ff,
+  dark-green-a: #164145,
 );
 $font-size: (
   xxs: 10px,
@@ -37,7 +41,9 @@ $font-size: (
   xl: 20px,
   xxl: 22px,
   xxxl: 26px,
+  xxxxl: 28px,
   large: 36px,
   large-xl: 42px,
+  large-xxl: 46px,
 );
 $font-body: Nunito, sans-serif;
