@@ -1,0 +1,32 @@
+@import url("../base/_variables.scss");
+.navbar {
+  padding: 20px 0;
+  background: map-get($map: $color, $key: white);
+  .navbar-brand {
+    margin-right: 16px;
+    i {
+      color: map-get($map: $color, $key: primary);
+    }
+    a {
+      &:active,
+      &:visited {
+        color: map-get($map: $color, $key: black);
+      }
+    }
+  }
+  .navbar-collapse {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    .navbar-list {
+      display: flex;
+      margin-right: auto;
+      .navbar-item {
+        padding: 10px 15px;
+        a {
+          color: map-get($map: $color, $key: gray);
+        }
+      }
+    }
+  }
+}

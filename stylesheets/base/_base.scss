@@ -1,0 +1,55 @@
+@import "variables";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+html,
+body {
+  // // @include pxRem(font-size, 16);
+  font-family: $font-body;
+  position: relative;
+  font-weight: 300;
+  color: map-get($color, black);
+  line-height: 1.7;
+  letter-spacing: 0.8px;
+  background-color: map-get($color, white);
+  overscroll-behavior: contain;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.2;
+  color: map-get($map: $color, $key: black);
+  font-weight: 700;
+}
+p {
+  margin: 0;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
